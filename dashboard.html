@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard | Coffee Haven</title>
+  <link rel="stylesheet" href="coffee.css">
+</head>
+<body>
+
+<header class="navbar">
+  <h1 class="logo">☕ Coffee Haven</h1>
+  <nav>
+    <a href="#menu">Menu</a>
+    <a href="#cart">Cart (<span id="cart-count">0</span>)</a>
+    <a href="#reviews">Reviews</a>
+    <a href="index.html">Logout</a>
+  </nav>
+</header>
+
+<section id="menu" class="menu">
+  <h2>Order Coffee</h2>
+  <div class="menu-items" id="menu-items"></div>
+</section>
+
+<section id="cart" class="contact">
+  <h2>Your Cart</h2>
+  <div id="cart-items"></div>
+  <button class="btn" id="confirm-order">Confirm Order</button>
+</section>
+
+<section class="contact">
+  <h2>Book a Table</h2>
+  <form id="table-form">
+    <input type="text" id="table-name" placeholder="Name" required>
+    <input type="date" id="table-date" required>
+    <input type="time" id="table-time" required>
+    <input type="number" id="table-people" placeholder="People" required>
+    <button class="btn">Book Table</button>
+  </form>
+</section>
+
+<section id="reviews" class="contact">
+  <h2>Reviews</h2>
+  <form id="review-form">
+    <input type="text" id="review-name" placeholder="Name" required>
+    <textarea id="review-text" placeholder="Your review"></textarea>
+    <button class="btn">Submit</button>
+  </form>
+  <div id="review-list"></div>
+</section>
+
+<script src="script3.js"></script>
+</body>
+</html>

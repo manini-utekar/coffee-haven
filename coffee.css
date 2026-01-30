@@ -1,0 +1,175 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: 'Segoe UI', sans-serif; line-height:1.6; color:#333; background:#fff; }
+
+/* Navbar */
+header { background:#3e2723; color:#fff; padding:1rem 2rem; }
+.navbar { display:flex; justify-content:space-between; align-items:center; }
+.logo { font-size:1.5rem; }
+.nav-links { list-style:none; display:flex; }
+.nav-links li { margin-left:20px; }
+.nav-links a { color:#fff; text-decoration:none; font-weight:bold; }
+.nav-links a:hover { color:#c37d15; }
+
+/* Hero */
+.hero { background:url('https://images.unsplash.com/photo-1521401292936-0a2129a30b1c?q=80&w=1965&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center/cover; height:90vh; display:flex; align-items:center; justify-content:center; text-align:center; padding:0 20px; }
+.hero-text { background:rgba(0,0,0,0.5); padding:30px; border-radius:10px; color:#fff; max-width:600px; box-shadow:0 4px 10px rgba(0,0,0,0.3); }
+.hero-text h2 { font-size:3rem; margin-bottom:1rem; }
+.hero-text p { font-size:1.2rem; margin-bottom:2rem; }
+.btn { background:#ffcc80; color:#3e2723; padding:12px 24px; font-weight:bold; border:none; border-radius:5px; text-decoration:none; cursor:pointer; transition:all 0.2s ease; }
+.btn:hover { background:#ffe0b2; transform:scale(1.05); }
+
+/* Menu */
+.menu { padding:4rem 2rem; text-align:center; }
+.menu h2 { margin-bottom:2rem; }
+.menu-items { display:flex; justify-content:center; gap:2rem; flex-wrap:wrap; }
+.card { background:#f5f5f5; padding:1rem; border-radius:10px; width:250px; box-shadow:0 2px 6px rgba(0,0,0,0.1); transition:all 0.2s ease; }
+.card:hover { transform:translateY(-5px); }
+.card img { width:100%; border-radius:10px; }
+.card h3 { margin:1rem 0; }
+.card button { margin-top:10px; padding:8px 15px; background:#3e2723; color:#fff; border:none; border-radius:5px; cursor:pointer; transition:all 0.2s ease; }
+.card button:hover { background:#5d4037; transform:scale(1.05); }
+
+
+/* Contact / Forms */
+.contact { padding:3rem 2rem; text-align:center; margin-top:3rem; }
+.contact form { max-width:500px; margin:auto; display:flex; flex-direction:column; }
+.contact input, .contact textarea { margin:10px 0; padding:10px; border:1px solid #ccc; border-radius:5px; }
+
+
+/* About Section */
+.why-coffee-haven {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #f7efe5;
+  font-family: 'Playfair Display', serif;
+}
+
+.why-coffee-haven p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #4b3832;
+}
+
+.why-coffee-haven .highlight {
+  font-weight: 600;
+}
+.about h2 {
+  margin-bottom: 1rem;
+}
+
+/* Reviews */
+.review-list { display:grid; gap:15px; margin-top:20px; }
+.review-card { background:#f7efe5; padding:15px; border-radius:8px; text-align:left; box-shadow:0 2px 5px rgba(0,0,0,0.1); }
+.review-card strong { color:#3e2723; }
+.review-card small { color:#555; font-size:0.8rem; }
+
+/* Footer */
+footer { background:#3e2723; color:#fff; text-align:center; padding:1rem; }
+
+/* Responsive */
+@media (max-width:768px){
+  .hero-text h2 { font-size:2rem; }
+  .hero-text p { font-size:1rem; }
+  .menu-items { flex-direction:column; align-items:center; }
+}
+
+/* Cart */
+#cart-count { background:#ffcc80; color:#3e2723; padding:4px 8px; border-radius:50%; font-size:0.9rem; font-weight:bold; }
+#cart-items {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  padding: 5px;
+  border-bottom: 1px solid #eee;
+}
+
+.cart-item button {
+  background-color: #e53935;
+  color: white;
+  border: none;
+  padding: 3px 6px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.cart-item button:hover {
+  background-color: #b71c1c;
+}
+
+
+ .btn {
+  align-content: center;
+}
+
+/* ================= STORY PAGE ONLY ================= */
+
+.story-page {
+  max-width: 900px;
+  margin: auto;
+  padding: 80px 30px;
+  line-height: 1.9;
+}
+
+.story-page h2 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: #3e2723;
+}
+
+.story-page h3 {
+  margin-top: 50px;
+  margin-bottom: 15px;
+  font-size: 1.6rem;
+  color: #4b3832;
+  text-transform: lowercase;
+}
+
+.story-page p {
+  font-size: 1.05rem;
+  margin-bottom: 18px;
+  color: #4b3832;
+}
+
+.story-page .highlight {
+  margin: 25px 0;
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #6d4c41;
+}
+
+/* Lists inside story */
+.story-list {
+  margin: 20px 0 30px 30px;
+}
+
+.story-list li {
+  margin-bottom: 10px;
+  font-size: 1.05rem;
+  color: #4b3832;
+}
+
+/* Cute section divider */
+.story-page h3::before {
+  content: "✨";
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .story-page {
+    padding: 50px 20px;
+  }
+
+  .story-page h2 {
+    font-size: 2.2rem;
+  }
+
+  .story-page h3 {
+    font-size: 1.4rem;
+  }
+}
