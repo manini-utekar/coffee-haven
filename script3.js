@@ -7,14 +7,14 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   const menuData = [
-    { name: "Espresso", price: 120, img: "https://images.unsplash.com/photo-1579992357154-faf4bde95b3d" },
-    { name: "Cappuccino", price: 160, img: "https://as1.ftcdn.net/v2/jpg/03/60/64/04/1000_F_360640468_ZD6nIMvYQ9EEDiHDeZ9IGxLsZj914wcT.jpg" },
-    { name: "Latte", price: 180, img: "https://images.pexels.com/photos/2067399/pexels-photo-2067399.jpeg" },
-    { name: "Americano", price: 150, img: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
-    { name: "Mocha", price: 190, img: "https://gatherforbread.com/wp-content/uploads/2014/10/Dark-Chocolate-Mocha-.jpg" },
-    { name: "Cold Brew", price: 200, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-c7TG638AJ-_OdMbHW9G1WUfwHVcBNNHYOw&s" },
-    { name: "Hot Chocolate", price: 140, img: "https://images.unsplash.com/photo-1637572815755-c4b80092dce1" },
-    { name: "Pastries", price: 250, img: "https://www.shutterstock.com/image-photo/sweet-traditional-pastry-on-dark-600nw-2428064751.jpg" }
+    { name: "Espresso", price: 120, img: "images/espresso.jpg" },
+    { name: "Cappuccino", price: 160, img: "images/cappacino.jpg" },
+    { name: "Latte", price: 180, img: "images/latte.jpeg" },
+    { name: "Americano", price: 150, img: "images/americano.jpg" },
+    { name: "Mocha", price: 190, img: "images/mocha.jpg" },
+    { name: "Cold Brew", price: 200, img: "images/cold brew.jpg" },
+    { name: "Hot Chocolate", price: 140, img: "images/hot chocolate.jpg" },
+    { name: "Pastries", price: 250, img: "images/pastry.jpg" }
   ];
 
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -152,6 +152,22 @@ if (bookBtn) {
     const date = document.getElementById("table-date").value;
     const time = document.getElementById("table-time").value;
     const people = document.getElementById("table-people").value;
+<<<<<<< HEAD
+=======
+
+    if (!name || !date || !time || !people) {
+      alert("Please fill in all fields to book a table.");
+      return;
+    }
+
+    alert(`✅ Table booked for ${people} people by ${name} at ${time} on ${date}`);
+
+    // Optionally, clear the form after booking
+    document.getElementById("table-form").reset();
+  });
+}
+
+>>>>>>> 45285ed (Updated PPT and other changes)
 
     if (!name || !date || !time || !people) {
       alert("Please fill in all fields to book a table.");
