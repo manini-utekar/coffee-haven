@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
     displayCart();
   }
 
-  function addToCart(name, price) {
+  window.addToCart = function(name, price) {
     cart.push({ itemName: name, price });
     localStorage.setItem("cart", JSON.stringify(cart));
     updateCartCount();
@@ -117,6 +117,7 @@ function displayReviews() {
 // save only once if not present
 localStorage.setItem("reviews", JSON.stringify(reviews));
 displayReviews();
+ 
 
 if (reviewForm) {
   reviewForm.onsubmit = e => {
@@ -143,5 +144,26 @@ window.removeReview = function(index) {
   localStorage.setItem("reviews", JSON.stringify(reviews));
   displayReviews();
 };
+// ---------- BOOK A TABLE ----------
+const bookBtn = document.getElementById("book-btn");
+if (bookBtn) {
+  bookBtn.addEventListener("click", () => {
+    const name = document.getElementById("table-name").value.trim();
+    const date = document.getElementById("table-date").value;
+    const time = document.getElementById("table-time").value;
+    const people = document.getElementById("table-people").value;
+
+    if (!name || !date || !time || !people) {
+      alert("Please fill in all fields to book a table.");
+      return;
+    }
+
+    alert(`✅ Table booked for ${people} people by ${name} at ${time} on ${date}`);
+
+    // Optionally, clear the form after booking
+    document.getElementById("table-form").reset();
+  });
+}
+
 
 }); 
