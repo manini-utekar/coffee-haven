@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {}
 
   const loggedInUser = localStorage.getItem("loggedInUser");
   if (window.location.pathname.includes("dashboard") && !loggedInUser) {
@@ -146,14 +146,13 @@ window.removeReview = function(index) {
 };
 // ---------- BOOK A TABLE ----------
 const bookBtn = document.getElementById("book-btn");
+
 if (bookBtn) {
   bookBtn.addEventListener("click", () => {
     const name = document.getElementById("table-name").value.trim();
     const date = document.getElementById("table-date").value;
     const time = document.getElementById("table-time").value;
     const people = document.getElementById("table-people").value;
-<<<<<<< HEAD
-=======
 
     if (!name || !date || !time || !people) {
       alert("Please fill in all fields to book a table.");
@@ -161,25 +160,6 @@ if (bookBtn) {
     }
 
     alert(`✅ Table booked for ${people} people by ${name} at ${time} on ${date}`);
-
-    // Optionally, clear the form after booking
     document.getElementById("table-form").reset();
   });
 }
-
->>>>>>> 45285ed (Updated PPT and other changes)
-
-    if (!name || !date || !time || !people) {
-      alert("Please fill in all fields to book a table.");
-      return;
-    }
-
-    alert(`✅ Table booked for ${people} people by ${name} at ${time} on ${date}`);
-
-    // Optionally, clear the form after booking
-    document.getElementById("table-form").reset();
-  });
-}
-
-
-}); 
