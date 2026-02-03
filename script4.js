@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
       alert("Cart is empty!");
       return;
     }
-    alert("✅ Order confirmed!");
+    alert("Order confirmed!");
     cart = [];
     localStorage.removeItem("cart");
     updateCartCount();
@@ -167,7 +167,7 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
 
-      alert(`✅ Table booked for ${people} people by ${name} at ${time} on ${date}`);
+      alert(`Table booked for ${people} people by ${name} at ${time} on ${date}`);
       document.getElementById("table-form").reset();
     });
   }
